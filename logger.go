@@ -136,7 +136,7 @@ func (fl *FileLogger) logToFile(level Level, message string) {
 }
 
 func formatMessage(time time.Time, timeformat string, level string, message string) string {
-	return fmt.Sprintf("%s %s: %s", time.Format(timeformat), level, message)
+	return fmt.Sprintf("%s %s: %s\n", time.Format(timeformat), level, message)
 }
 
 func log(logFile io.Writer, fmtMsg string) error {

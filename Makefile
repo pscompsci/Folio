@@ -2,6 +2,7 @@ all: dist/folio_macos_darwin_amd64 dist/folio_linux_amd64 dist/folio_windows_X86
 
 clean:
 	rm -rf dist/
+	rm log.log
 
 dist/folio_macos_darwin_amd64: *.go
 	GOOS=darwin GOARCH=amd64 go build -o dist/folio_macos_darwin_amd64

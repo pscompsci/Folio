@@ -97,7 +97,7 @@ func TestFormatMessage(t *testing.T) {
 	levelString := "DEBUG"
 	testMsg := "Test message"
 	msg := formatMessage(testTime, time.RFC3339, levelString, testMsg)
-	want := "2021-07-25T00:00:00Z DEBUG: Test message"
+	want := "2021-07-25T00:00:00Z DEBUG: Test message\n"
 	if strings.Compare(msg, want) != 0 {
 		t.Errorf("FormatTime: Want: '%s', Got: '%s'", want, msg)
 	}
