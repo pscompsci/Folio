@@ -5,13 +5,15 @@ import (
 	"time"
 )
 
+var (
+	inputDir  string
+	outputDir string
+)
+
 func main() {
 	var run bool
 	var serve bool
 	var clean bool
-
-	var inputDir string
-	var outputDir string
 
 	flag.BoolVar(&run, "run", true, "Generate the website from the source files")
 	flag.BoolVar(&clean, "clean", false, "Remove the previous build before generating the site")
